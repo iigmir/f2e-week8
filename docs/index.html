@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> Hello </title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header>
+        <!-- <canvas></canvas> -->
+        <svg viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+            <!-- Simple rect element -->
+            <rect x="0" y="0" width="100" height="100" />
+        </svg>
         <h1>Geometry person</h1>
         <h2>Find your core personality type in shapes!</h2>
     </header>
@@ -43,28 +49,6 @@
         <h3> Your personality type is... </h3>
         <h4></h4>
     </footer>
-    <script type="module">
-    var resule_score = [0,0,0];
-    let selection = Array.from( document.querySelectorAll("input") );
-    let game = Array.from( document.querySelectorAll("body > *:not(script)") );
-
-    function re_render()
-    {
-        document.getElementById("result").innerText = resule_score.toString();
-    }
-    function switch_score( event )
-    {
-        let scoreboard = {
-            "q1" : 0,
-            "q2" : 1,
-            "q3" : 2
-        };
-        resule_score[ scoreboard[ event.target.name ] ] = event.target.value;
-        re_render();
-    }
-
-    document.getElementById("result").innerText = resule_score.toString();
-    selection.forEach( x => x.addEventListener( "change" , e => switch_score(e) , false ) );
-    </script>
+    <script type="module" src="./js/main.js"></script>
 </body>
 </html>

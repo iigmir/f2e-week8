@@ -1,0 +1,33 @@
+@keyframes spin
+{
+    100%
+    {
+        transform:rotate(360deg);
+    }
+}
+
+#__bs_notify__
+{
+    width:20%;
+    height:20%;
+}
+*
+{
+    margin: 0;
+    text-align: center;
+}
+body > *
+{
+    width: 100vw;
+    height: 100vh;
+}
+
+header
+{
+    background-color: #1469FF;
+    color: #FFFFFF;
+}
+header svg rect
+{
+    /* animation:spin 4s linear infinite; */
+}
