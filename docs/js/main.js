@@ -17,9 +17,14 @@ function switch_score( event )
     resule_score[ scoreboard[ event.target.name ] ] = event.target.value;
     re_render();
 }
+function expand_shape( event , shape )
+{
+    console.log( event );
+}
 
 window.onload = function()
 {
     result.innerText = resule_score.toString();
     selection.forEach( x => x.addEventListener( "change" , e => switch_score(e) , false ) );
+    document.querySelector("header svg rect").addEventListener( "animationend" , e => expand_shape(e,"rect") , false )
 }
