@@ -14,6 +14,7 @@
 *
 {
     margin: 0;
+    font-family: sans-serif;
     text-align: center;
 }
 body > *
@@ -39,19 +40,27 @@ header svg
 {
     width: 540px;
     height: 540px;
-    z-index: -1;
+    overflow: visible;
 }
 header nav
 {
     z-index: 2;
     position: absolute;
     top: 40%;
-    left: 15%;
+    left: 12%;
 }
-/* header svg rect
+header svg .clock
 {
-    animation:spin 1s linear infinite;
-} */
+    animation:spin 5s linear;
+    transform-origin: center;
+    animation-direction: normal;
+}
+header svg .counterclock
+{
+    animation:spin 5s linear;
+    transform-origin: center;
+    animation-direction: reverse;
+}
 h1
 {
     font-size: 3rem;
