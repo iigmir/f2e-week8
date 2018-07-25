@@ -26,8 +26,37 @@ header
 {
     background-color: #1469FF;
     color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
 }
-header svg rect
+header .container
 {
-    /* animation:spin 4s linear infinite; */
+    position: relative;
+}
+header svg
+{
+    width: 540px;
+    height: 540px;
+    z-index: -1;
+}
+header nav
+{
+    z-index: 2;
+    position: absolute;
+    top: 40%;
+    left: 15%;
+}
+/* header svg rect
+{
+    animation:spin 1s linear infinite;
+} */
+h1
+{
+    font-size: 3rem;
+}
+h2
+{
+    font-size: 1rem;
 }
